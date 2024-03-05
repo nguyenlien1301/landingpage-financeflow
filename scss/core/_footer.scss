@@ -1,0 +1,151 @@
+.footer {
+    background-color: var(--blue-dark);
+    padding-top: 56px;
+    &__top {
+        @include flexbetween;
+        &-logo {
+            @include middle(true);
+        }
+    }
+    &__center {
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        margin-top: 92px;
+        padding-bottom: 125px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        &-application {
+            .textbox {
+                max-width: 420px;
+            }
+        }
+        &-menu {
+            width: 280px;
+            .text {
+                font-size: var(--fz-label);
+                line-height: var(--lh-label);
+                letter-spacing: var(--spacing-label);
+                margin-bottom: 31px;
+                text-transform: uppercase;
+            }
+            .nav {
+                display: flex;
+                justify-content: space-between;
+                padding-top: 26px;
+                border-top: 1px solid var(--white-color);
+                &__menu {
+                    li {
+                        a {
+                            font-size: var(--fz-menu-footer);
+                            line-height: var(--lh-menu-footer);
+                            letter-spacing: var(--spacing-menu-footer);
+                            padding: 10px 0;
+                            text-transform: uppercase;
+                            @include transition(var(--transition));
+                            &:hover {
+                                color: var(--blue-light);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &-application {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-item);
+            overflow: hidden;
+            padding: 44px 38px;
+            .textbox {
+                .heading {
+                    font-size: var(--fz-label);
+                    line-height: var(--lh-label);
+                    letter-spacing: var(--spacing-label);
+                    font-family: var(--font-bold);
+                    text-transform: uppercase;
+                    margin-bottom: 12px;
+                }
+                .button {
+                    margin-top: 24px;
+                    @include flexbetween;
+                    .btnmain {
+                        gap: 8px;
+                    }
+                }
+            }
+        }
+    }
+    &__bottom {
+        @include flexbetween;
+        height: 90px;
+        &-copyright {
+            font-size: var(--fz-exsmall);
+            line-height:  var(--lh-text-body-small);
+            letter-spacing: var(--spacing);
+        }
+        &-backtotop {
+            position: fixed;
+            right: clamp(var(--gap), calc((100vw - (var(--mw-container) - var(--gap) * 2)) / 2), 9999px);
+            bottom: 20px;
+            cursor: pointer;
+            background-color: var(--blue-light);
+            @include size(50px, 50px, true);
+            @include middle(true);
+            @include transition(var(--transition));
+            @include visible(0);
+            z-index: 10000;
+            &.is-show {
+                @include visible;
+            }
+            svg {
+                path {
+                    @include transition(var(--transition));
+                }
+            }
+            &:hover {
+                background-color: var(--white-color);
+                svg {
+                    path {
+                        stroke: var(--blue-light);
+                    }
+                }
+            }
+        }
+    }
+    @include xs {
+        &__bottom {
+            justify-content: center;
+            height: 70px
+        }
+    }
+    @include maxW(960px) {
+        padding-top: 40px;
+        &__top {
+            flex-direction: column;
+            .social {
+                margin-top: 24px;
+                gap: 24px;
+            }
+        }
+        &__center {
+            margin-top: 45px;
+            flex-direction: column;
+            row-gap: 56px;
+            &-application {
+                padding: 44px 34px;
+                .textbox {
+                    .heading {
+                        margin-bottom: 18px;
+                    }
+                    .button {
+                        flex-direction: column;
+                        row-gap: 16px;
+                        margin-top: 18px;
+                        .btnmain {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,269 @@
+.getintouch {
+    padding-top: calc(80px + var(--h-header));
+    position: relative;
+    overflow: hidden;
+    &__blur {
+        position: absolute;
+        top: initial;
+        left: initial;
+        @include transform(translate(50%, -50%));
+    }
+    .container {
+        @include flexbetween;
+        gap: var(--gap);
+    }
+    &__left {
+        .heading {
+            margin-bottom: 52px;
+        }
+        .form {
+            &__group {
+                display: flex;
+                column-gap: 25px;
+                margin-bottom: 32px;
+                &-info {
+                    .label {
+                        display: block;
+                        margin-bottom: 12px;
+                    }
+                    .input {
+                        padding: 0 25px;
+                        height: var(--h-input);
+                        width: 364px;
+                        border-radius: 100px;
+                        outline: none;
+                        background-color: var(--blue-box);
+                        border: 1px solid var(--border-color);
+                        color: var(--white-color);
+                        font-size: 1.8rem;
+                        line-height: 2.7rem;
+                        letter-spacing: 0;
+                        @include transition(var(--transition));
+                        &::placeholder {
+                            font-size: 1.8rem;
+                            line-height: 2.7rem;
+                            letter-spacing: 0;
+                            color: var(--white-color);
+                        }
+                        &:focus {
+                            border: 1px solid var(--white-color);
+                        }
+                        &.changeborder {
+                            border: 1px solid var(--blue-light);
+                        }
+                        &.invalid {
+                            border: 1px solid var(--red-color);
+                        }
+                    }
+                    .message {
+                        color: var(--red-color);
+                        font-size: var(--fz-error);
+                        line-height: normal;
+                        letter-spacing: 0;
+                        display: inline-block;
+                        margin-top: 13px;
+                    }
+                    .feedback {
+                        resize: none;
+                        width: 753px;
+                        height: 162px;
+                        outline: none;
+                        padding: 20px 25px;
+                        background-color: var(--blue-box);
+                        color: var(--white-color);
+                        border: 1px solid var(--border-color);
+                        border-radius: 14px;
+                        font-size: 1.8rem;
+                        line-height: 2.7rem;
+                        letter-spacing: 0;
+                        width: 100%;
+                        &::placeholder {
+                            color: var(--white-color);
+                            font-size: 1.8rem;
+                            line-height: 2.7rem;
+                            letter-spacing: 0;
+                        }
+                        &:focus {
+                            border: 1px solid var(--white-color);
+                        }
+                    }
+                }
+            }
+            .btnmain {
+                margin-top: 52px;
+            }
+        }
+    }
+    &__right {
+        .textbox {
+            .heading {
+                margin-bottom: 15px;
+            }
+        }
+        &-electronic {
+            margin-top: 36px;
+            .email {
+                width: fit-content;
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                &:not(:last-child) {
+                    margin-bottom: 24px;
+                }
+            }
+        }
+    }
+    @include maxW(1220px) {
+        .container {
+            flex-direction: column;
+            align-items: stretch;
+            gap: 48px;
+        }
+        &__left {
+            .form {
+                &__group {
+                    &-info {
+                        width: 100%;
+                        .input {
+                            width: 100%;
+                        }
+                    }
+                }
+                .btnmain {  
+                    margin: 32px auto 0 auto;
+                }
+            }
+        }
+        &__right {
+            .textbox {
+                max-width: 640px;
+            }
+        }
+    }
+    @include sm {
+        &__blur {
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+    @include xxs {
+        padding-top: calc(48px + var(--h-header));
+        &__left {
+            .heading {
+                margin-bottom: 40px;
+            }
+            .form {
+                &__group {
+                    flex-direction: column;
+                    row-gap: 24px;
+                }
+                .btnmain {
+                    width: 100%;
+                }
+            }
+        }
+        &__right {
+            .textbox {
+                .heading {
+                    margin-bottom: 20px;
+                }
+            }
+            &-electronic {
+                margin-top: 34px;
+            }
+        }
+    }
+}
+
+.accordion {
+    --right: 20px;
+    padding: 120px 0;
+    &__list {
+        margin-top: 80px;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: var(--gap);
+        &-question {
+            grid-column: 3/11;
+            .content {
+                padding: 32px 8px;
+                border-bottom: 1px solid var(--white-color);
+                &__question {
+                    cursor: pointer;
+                    width: 100%;
+                    position: relative;
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        width: 27px;
+                        height: 2px;
+                        background-color: var(--white-color);
+                        top: 50%;
+                        right: 8px;
+                        @include transform(translateY(-50%));
+                        border-radius: 100px;
+                    }
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        width: 27px;
+                        height: 2px;
+                        background-color: var(--white-color);
+                        top: 50%;
+                        right: 8px;
+                        @include transform(translateY(-50%));
+                        @include transition(var(--transition));
+                        border-radius: 100px;
+                        @include transform(translateY(-50%) rotate(90deg));
+                    }
+                    &.active {
+                        &::after {
+                            @include transform(translateY(-50%) rotate(0));
+                        }
+                    }
+                    .heading {
+                        font-size: var(--fz-question);
+                        line-height: var(--lh-question);
+                        letter-spacing: var(--spacing-question);
+                        margin-right: 40px;
+                        @include transition(var(--transition));
+                        &:hover {
+                            color: var(--blue-light);
+                        }
+                    }
+                }
+                &__answer {
+                    max-height: 0;
+                    overflow: hidden;
+                    @include transition(max-height var(--transition));
+                    p {
+                        margin-top: 16px;
+                    }
+                }
+            }
+            &.active {
+                background-color: var(--white-color);
+            }
+
+        }
+    }
+    @include md {
+        &__list {
+            grid-template-columns: 1fr;
+            &-question {
+                grid-column: 1/2;
+            }
+        }
+    }
+    @include xs {
+        padding: 80px 0;
+        &__list {
+            margin-top: 30px;
+            &-question {
+                .content {
+                    padding: 24px 0;
+                }
+            }
+        }
+    }
+}

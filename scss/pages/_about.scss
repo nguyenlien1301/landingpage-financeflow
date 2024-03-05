@@ -1,0 +1,270 @@
+.finance {
+    padding-top: calc(60px + var(--h-header));
+    padding-bottom: 112px;
+    .container {
+        display: flex;
+        justify-content: center;
+    }
+    .textbox {
+        .heading {
+            margin-bottom: 21px;
+        }
+        p {
+            max-width: 606px;
+        }
+    }
+    @include sm {
+        padding-top: calc(48px + var(--h-header));
+        padding-bottom: 48px;
+        .container {
+            justify-content: stretch;
+        }
+       .textbox {
+            margin: 0;
+            text-align: left;   
+       }
+    }
+}
+
+.factors {
+    .textbox {
+        margin-bottom: 29px;
+    }
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 28px;
+        &-item {
+            background-color: var(--blue-box);
+            border-radius: var(--radius-item);
+            overflow: hidden;
+            padding: 58px 32px;
+            display: flex;
+            align-items: flex-start;
+            gap: 24px;
+            .content {
+                .label {
+                    margin-bottom: 7px;
+                }
+            }
+        }
+    }
+    @include xs {
+        &__list {
+            gap: 16px;
+            &-item {
+                padding: 40px 20px;
+                gap: 20px;
+            }
+        }
+    }
+    @include maxW(640px) {
+        .textbox {
+            margin-bottom: 16px;
+        }
+        &__list {
+            grid-template-columns: 1fr;
+            &-item {
+                padding: 40px 32px;
+                flex-direction: column;
+                gap: 24px;
+            }
+        }
+    }
+}
+
+.mission {
+    padding-top: 232px;
+    padding-bottom: 180px;
+    padding-left: var(--gap);
+    display: flex;
+    align-items: flex-start;
+    &__content {
+        padding-left: calc((100vw - 1198px) / 2);
+        .textbox {
+            max-width: 612px;
+            &:not(:last-child) {
+                margin-bottom: 78px;
+            }
+            .heading {
+                margin-bottom: 16px;
+            }
+            p {
+                &:not(:last-child) {
+                    margin-bottom: 33px;
+                }
+            }
+        }
+    }
+    &__thumbnail {
+        overflow: hidden;
+        padding-left: calc(76px + var(--gap));
+        &-img {
+            @include img;
+        }
+        .img {
+            display: none;
+        }
+    }
+    @include sm {
+        flex-direction: column;
+        padding: 44px var(--pd-container) 80px var(--pd-container);
+        &__content {
+            .textbox {
+                max-width: initial;
+            }
+
+        }
+        &__thumbnail {
+            padding-left: initial;
+            margin-top: 66px;
+            &-img {
+                display: none;
+            }
+            .img {
+                display: block;
+            }
+        }
+    }
+    @include xxxs {
+        &__content {
+            .textbox:not(:last-child) {
+                margin-bottom: 55px;
+            }
+        }
+    }
+}
+
+.timeline {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: var(--gap);
+    }
+    &__content {
+        position: relative;
+        grid-column: 1/5;
+        .textbox {
+            position: sticky;
+            position: --webkit-sticky;
+            top: var(--h-header);
+            .heading {
+                margin-bottom: 16px;
+            }
+        }
+    }
+    &__list {
+        grid-column: 6/13;
+        &-item {
+            padding-bottom: 40px;
+            border-bottom: 1px solid var(--white-color);
+            padding-left: 54px;
+            &:not(:last-child) {
+                margin-bottom: 80px;
+            }
+            .number {
+                font-size: var(--fz-number);
+                line-height: var(--lh-number);
+                letter-spacing: var(--spacing-number);
+                font-family: var(--font-bold);
+                position: relative;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    @include size(24px ,24px, true);
+                    background-color: var(--white-color);
+                    top: 50%;
+                    left: -54px;
+                    @include transform(translateY(-50%));
+                }
+            }
+            .label {
+                margin-top: 22px;
+                margin-bottom: 12px;
+            }
+        }
+    }
+    @include xs {
+        .container {
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+        &__content {
+            grid-column: 1/2;
+            .textbox {
+                position: initial;
+            }
+        }
+        &__list {
+            grid-column: 1/2;
+            &-item {
+                padding-left: 50px;
+                &:not(:last-child) {
+                    margin-bottom: 56px;
+                }
+                .number {
+                    &::before {
+                        left: -50px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.team {
+    padding-top: 132px;
+    padding-bottom: 127px;
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--gap);
+        margin-top: 50px;
+        &-item {
+            padding: 24px;
+            background-color: var(--blue-dark);
+            border-radius: var(--radius-item);
+            .thumbnail {
+                border-radius: calc(var(--radius-item) - 8px);
+                width: 100%;
+                overflow: hidden;
+                aspect-ratio: 327/347;
+                &__user {
+                    @include img;
+                }
+            }
+            .author__info {
+                margin-top: 32px;
+                text-align: center;
+                &-name {
+                    margin-bottom: 12px;
+                }
+            }
+        }
+    }
+    @include maxW(820px) {
+        padding-top: 120px;
+        padding-bottom: 80px;
+        &__list {
+            grid-template-columns: 1fr;
+            gap: 16px;
+            margin-top: 24px;
+        }
+    }
+}
+
+.investors {
+    padding-bottom: 230px;
+    .textbox {
+        .heading {
+            margin-bottom: 16px;
+        }
+    }
+    .company__list {
+        margin-top: 40px;
+    }
+
+    @include xs {
+        padding-bottom: 80px;
+    }
+}

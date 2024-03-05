@@ -1,0 +1,33 @@
+.error {
+    position: relative;
+    position: relative;
+    height: 100vh;
+    min-height: 640px;
+    &__blur {
+        @include middle;
+    }
+    .container {
+        height: 100%;
+        position: relative;
+    }
+    &__content {
+        @include middle;
+        text-align: center;
+        .--h1 {
+            font-size: 18rem;
+            line-height: 16rem;
+            letter-spacing: 0;
+            font-family: var(--font-bold);
+            color: var(--blue-light);
+        }
+        .--h2 {
+            letter-spacing: -0.42px;
+            margin: 15px 0 16px 0;
+        }
+        .btn {
+            margin-top: 40px; 
+            @include middle(true);
+            gap: 24px;
+        }
+    }
+}

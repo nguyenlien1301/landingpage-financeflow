@@ -1,0 +1,160 @@
+:root {
+    --blue-light: #0328EE;
+    --white-color: #ffffff;
+    --blue-dark: #00116A;
+    --blue-color: #010725;
+    --red-color: red;
+    --blue-box: #010d50;
+    --border-color: #010725;
+    
+    --gap: 26px; 
+    --mw-page: 2560px;
+    --page-container: 1198px;
+    --mw-container: calc(var(--page-container) + var(--gap) * 2);
+    --pd-container: 28px;
+    --h-header: 100px;
+// font-family
+    --font-bold: sansbold;
+    --font-gerular: sansregu;
+    --font-medium: sansmedi;
+    --font-italic: sansita;
+// menu
+    --text-menu: 1.4rem;
+    --lh-menu: 1.6rem;
+    --spacing-menu: 1.4px;
+    --pd-menu: 10px 14px;
+    --pd-lr: 14px;
+//button
+    --fz-btn: 1.6rem;
+    --lh-btn: 1.6rem;
+    --spacing-btn: 1.6px;
+    --h-btn-header: 56px;
+    --h-btn: 70px;
+    --radius-btn: 80px;
+    --pd-btn: 0 32px;
+// h1
+    --fz-h1: 6.6rem;
+    --lh-h1: 8rem;
+    --spacing-h1: -1px;
+// h2
+    --fz-h2: 4.2rem;
+    --lh-h2: 5.5rem;
+    // spacing-h2: 0px;
+// h3
+    --fz-h3: 2.2rem;
+    --lh-h3: 3.1rem;
+    // spacing-h3: 0px;
+// h5 
+    --fz-h5: 1.6rem;
+    --lh-h5: 1.8rem;
+    --spacing-h5: 0.8px;
+// label
+    --fz-label: 1.8rem;
+    --lh-label: 2.6rem;
+    --spacing-label: 0.9px;
+// text body
+    --fz-text-body: 1.8rem;
+    --lh-text-body: 3.2rem;
+    // spacing-text-body: 0px;
+// text body small
+    --fz-text-body-small: 1.6rem;
+    --lh-text-body-small: 2.6rem;
+    // spacing-text-body-small: 0px;
+// tecct tag
+    --fz-tag: 1.4rem;
+    --lh-tag: 1.8rem;
+    --spacing-tag: 0.7px;
+    --h-tag: 36px;
+    // text menu footer
+    --fz-menu-footer: 1.4rem;
+    --lh-menu-footer: 1.6rem;
+    --spacing-menu-footer: 1.4px;
+    --h-footer-bottom: 90px;
+// chung
+    --radius-item: 40px;
+    --spacing: 0;
+    --spacing-default: normal;
+    --transition: 0.3s;
+    --tb-hambuger: 10px;
+// number year
+    --fz-number: 2.8rem;
+    --lh-number: 3rem;
+    --spacing-number: 0.28px;
+    // text li couser
+    --fz-li-course: 1.8rem;
+    --lh-li-course: 2rem;
+    // text blog
+    --fz-text-blog: 2.8rem;
+    --lh-text-blog: 4rem;
+    --spacing-text-blog: 0.28px;
+    // height input form
+    --h-input: 68px;
+    // text accodient
+    --fz-question: 2.5rem;
+    --lh-question: 3rem;
+    --spacing-question: 0.28px;
+    --fz-exsmall: 1.6rem;
+    // fz text table 
+    --fz-text-table: 1.2rem;
+    --lh-text-table: 1.2rem;
+    --spacing-text-table: 0.6px;
+    --fz-error: 1.4rem;
+    @include maxW(1024px) {
+        --pd-menu: 10px 10px;
+        --pd-lr: 10px;
+    }
+
+    @include md {
+        --mw-container: 1140px;
+        --fz-label: 16px;
+    }
+
+    @include sm {
+        --mw-container: 960px;
+        --text-menu: 3.2rem;
+        --lh-menu: 100%;
+        --pd-menu: 20px 10px;
+        --pd-lr: 10px;
+        // text blog
+        --fz-text-blog: 2.2rem;
+        --lh-text-blog: 3.1rem;
+        --gap: 16px;
+        --fz-h1: 6.4rem;
+    }
+
+    @include xs {
+        --mw-container: 100%;
+        --fz-h1: 5.5rem;
+        --pd-container: 15px;
+        --h-header: 73px;
+        --h-footer-bottom: 70px
+        // text body
+        --fz-text-body: 1.6rem;
+        --lh-text-body: 2.6rem;
+        // h1
+        --fz-h1: 3.8rem;
+        --lh-h1: 4.6rem;
+        // h2 
+        --fz-h2: 2.8rem;
+        --lh-h2: 3.6rem;
+        // menu
+        --text-menu: 3.2rem;
+        --lh-menu: 100%;
+        
+        // label 
+        --fz-label: 1.4rem;
+        --lh-label: 1.8rem;
+        --spacing-label: 0.7px;
+        // number
+        --fz-number: 2.8rem;
+        --lh-number: 2.5rem;
+        --spacing-number: 0;
+        // text accodient
+        --fz-question: 1.8rem;
+        --lh-question: 2.6rem;
+        --fz-exsmall: 1.4rem;
+    }
+    @include xxxs {
+        --fz-h1: 3.6rem;
+    }
+}

@@ -1,0 +1,37 @@
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    body {
+        width: 100%;
+        margin: 0 auto;
+        max-width: var(--mw-page);
+        color: var(--white-color);
+        font-size: var(--fz-text-body);
+        line-height: var(--lh-text-body);
+        letter-spacing: var(--spacing);
+        font-family: var( --font-gerular);
+        background-color: var(--blue-color);
+        position: relative;
+        @include customScroll;
+        &::-webkit-scrollbar-thumb {
+            background-image: linear-gradient(to bottom, var(--blue-dark), var(--blue-light), var(--blue-dark));
+            border-radius: 100px;
+        }
+        .home {
+            overflow-x: hidden;
+        }
+        .blur {
+            position: absolute;
+            top: -4%;
+            left: -20%; 
+        }
+        .container {
+            width: 100%;
+            margin: 0 auto;
+            max-width: var(--mw-container);
+            padding-right: var(--pd-container);
+            padding-left: var(--pd-container);
+            position: relative;
+        }
+    }
+}

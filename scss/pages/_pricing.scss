@@ -1,0 +1,110 @@
+.pricing {
+    padding-top: calc(40px + var(--h-header));
+    .textbox {
+        max-width: 550px;
+        .heading {
+            margin-bottom: 16px;
+        }
+    }
+    &__list {
+        margin-top: 40px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        &-item {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+    }
+    @include sm {
+        .textbox {
+            margin: 0;
+            text-align: left;
+        }
+        &__list {
+            flex-direction: column;
+            align-items: stretch;
+            gap: 38px;
+            &-item {
+                gap: 18px;
+            }
+        }
+    }
+    @include maxW(1060px) {
+        &__list {
+            grid-template-columns: repeat(2, 1fr);
+            place-items: center;
+            gap: 38px;
+        }
+    }
+    @include xxs {
+        &__list {
+            grid-template-columns: 1fr;
+            place-items: initial;
+        }
+    }
+}
+
+.course {
+    padding-top: 56px;
+    padding-bottom: 255px;
+    
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--gap);
+        &-item {
+            border-radius: var(--radius-item);
+            padding: 48px 30px 42px 30px;
+            background-color: var(--blue-box);
+            .textbox {
+                .heading {
+                    margin: 16px 0;
+                }
+            }
+            .content {
+                margin-top: 40px;
+                &__list {
+                    li {
+                        margin-top: 16px;
+                        font-size: var(--fz-li-course);
+                        line-height: var(--lh-li-course);
+                        letter-spacing: var(--spacing);
+                        position: relative;
+                        padding-left: 16px;
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            width: 6px;
+                            height: 6px;
+                            background-color: var(--blue-light);
+                            border-radius: 50%;
+                            top: 50%;
+                            left: 0;
+                            @include transform(translateY(-50%));
+                        }
+                    }
+                }
+            }
+            .btnmain {
+                margin-top: 54px;
+                width: 100%;
+            }
+        }
+    }
+    @include md {
+        &__list {
+            &-item {
+                padding: 30px 25px 28px 25px;
+            }
+        }
+    }
+    @include sm {
+        padding-top: 48px;
+        padding-bottom: 80px;
+        &__list {
+            gap: 16px;
+            grid-template-columns: 1fr;
+        }
+    }
+}

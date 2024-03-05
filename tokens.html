@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FananceFlow - CFD Circle</title>
+    <meta name="title" content="CFD Circle" />
+    <meta name="description" content="" />
+    <meta name="keyword" content=""/>
+    <link rel="icon" href="favicon.ico" />
+    <link rel="canonical" href="https://cfdcircle.vn" />
+    <!-- meta tag facebook -->
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:locale" content="en" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="CFD Circle" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="CFD Circle" />
+    <!-- meta twitter hỗ trợ những nước thịnh hành twitter -->
+    <meta name="twitter:card" content="" />
+    <meta name="twitter:site" content="" />
+    <meta name="twitter:title" content="" />
+    <meta name="twitter:description" content="" />
+    <meta name="twitter:image" content="" />
+    <style>
+        /* page loading */
+        .loading {
+            width: 100%;
+            height: 100vh;
+            background-color: var(--blue-color);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 9999;
+            opacity: 1;
+            visibility: visible;
+        }
+        .loading.--is-loaded {
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.4s;
+            -webkit-transition: 0.4s;
+        }
+        .loading .loading__page {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        .loading .loading__page .loading__page-progress {
+            width: 160px;
+            height: 4px;
+            background-color: var(--blue-light);
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+        }  
+        .loading .loading__page .loading__page-progress .loading__progress {
+            position: absolute;
+            width: 0;
+            height: inherit;
+            background-color: var(--white-color);
+        }
+        .loading .loading__page .loading__page-percent {
+            margin-top: 17px;
+        }
+    </style>
+    <link rel="stylesheet" href="./dest/style.min.css" />
+    <link rel="stylesheet" href="./dest/fonts.css" />
+</head>
+<body class="tokenspage">
+    <div class="loading">
+        <div class="loading__page">
+            <div class="loading__page-progress">
+                <div class="loading__progress"></div>
+            </div>
+            <div class="loading__page-percent --text-btn"></div>
+        </div>
+    </div>
+    <div class="progressbar"></div>
+    <header class="header">
+        <div class="container">
+            <div class="header__left">
+                <a href="./" class="header__left-logo">
+                    <img src="./img/logo.svg" alt="fananceflow" class="logo">
+                </a>
+                <nav class="header__left-nav">
+                    <div class="blur">
+                        <img srcset="./img/blur.png 2x" alt="" class="blurimg">
+                    </div>
+                    <ul class="menu">
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./about.html">About</a></li>
+                        <li><a href="./pricing.html">Pricing</a></li>
+                        <li><a href="./tokens.html" class="active">Tokens</a></li>
+                        <li><a href="./blog.html">Blog</a></li>
+                        <li><a href="./contact.html">contact us</a></li>
+                        <li>
+                            <a href="https://cfdcircle.vn/" target="_blank" class="header__signup btnmain text-btn">Download App</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <a href="https://cfdcircle.vn/" target="_blank" class="header__signup btnmain text-btn">Download App</a>
+            <div class="header__hambuger">
+                <span></span>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="tokens">
+            <div class="container">
+                <div class="textbox --center">
+                    <h1 class="heading --h1">Tokens</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat nulla suspendisse tortor aenean dis placerat. Scelerisque</p>
+                </div>
+                <div class="tokens__table">
+                    <div class="tokens__table-row">
+                      <div class="col">Name</div>
+                      <div class="col">Description</div>
+                      <div class="col">Market Cap</div>
+                      <div class="col">Volume</div>
+                      <div class="col">Website</div>
+                    </div>
+                    <div class="tokens__table-row">
+                        <div class="col" data-title="Name">
+                            <div class="cryptocurrency">
+                                <img src="./img/icon-bitcoin.svg" alt="bitcoin" class="cryptocurrency__icon">
+                                <span class="cryptocurrency__name">Bitcoin</span>
+                                <span class="cryptocurrency__text">BTC</span>
+                            </div>
+                        </div> 
+                        <div class="col" data-title="Description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                        <div class="col" data-title="Market Cap">$252,844,036,453 USD</div>
+                        <div class="col" data-title="Volume">$30,504,879,301 USD</div>
+                        <div class="col" data-title="Website"><a href="#" class="col-link">Visit Website</a></div>
+                    </div>
+                    <div class="tokens__table-row">
+                        <div class="col" data-title="Name">
+                            <div class="cryptocurrency">
+                                <img src="./img/icon-ethereum.svg" alt="ethereum" class="cryptocurrency__icon">
+                                <span class="cryptocurrency__name">Ethereum</span>
+                                <span class="cryptocurrency__text">ETH</span>
+                            </div>
+                        </div> 
+                        <div class="col" data-title="Description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div>
+                        <div class="col" data-title="Market Cap">$252,844,036,453 USD</div>
+                        <div class="col" data-title="Volume">$30,504,879,301 USD</div>
+                        <div class="col" data-title="Website"><a href="#" class="col-link">Visit Website</a></div>
+                    </div>
+                    <div class="tokens__table-row">
+                        <div class="col" data-title="Name">
+                            <div class="cryptocurrency">
+                                <img src="./img/icon-litecoin.svg" alt="itecoin" class="cryptocurrency__icon">
+                                <span class="cryptocurrency__name">Litecoin</span>
+                                <span class="cryptocurrency__text">LTC</span>
+                            </div>
+                        </div> 
+                        <div class="col" data-title="Description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div>
+                        <div class="col" data-title="Market Cap">$252,844,036,453 USD</div>
+                        <div class="col" data-title="Volume">$30,504,879,301 USD</div>
+                        <div class="col" data-title="Website"><a href="#" class="col-link">Visit Website</a></div>
+                    </div>
+                    <div class="tokens__table-row">
+                        <div class="col cryptocurrency" data-title="Name">
+                            <div class="cryptocurrency">
+                                <img src="./img/icon-tron.svg" alt="bitcoin" class="cryptocurrency__icon">
+                                <span class="cryptocurrency__name">TRON</span>
+                                <span class="cryptocurrency__text">TRX</span>
+                            </div>
+                        </div> 
+                        <div class="col" data-title="Description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div>
+                        <div class="col" data-title="Market Cap">$252,844,036,453 USD</div>
+                        <div class="col" data-title="Volume">$30,504,879,301 USD</div>
+                        <div class="col" data-title="Website"><a href="#" class="col-link">Visit Website</a></div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__top">
+                <a href="./" class="footer__top-logo">
+                    <img src="./img/logo.svg" alt="logo" class="logo">
+                </a>
+                <div class="social">
+                    <a href="https://www.facebook.com/cfdcircle" target="_blank" class="social__link">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.0223 4.84375C7.16518 4.84375 4.88839 7.16518 4.88839 9.97768C4.88839 12.8348 7.16518 15.1116 10.0223 15.1116C12.8348 15.1116 15.1563 12.8348 15.1563 9.97768C15.1563 7.16518 12.8348 4.84375 10.0223 4.84375ZM10.0223 13.3259C8.19196 13.3259 6.67411 11.8527 6.67411 9.97768C6.67411 8.14732 8.14732 6.67411 10.0223 6.67411C11.8527 6.67411 13.3259 8.14732 13.3259 9.97768C13.3259 11.8527 11.8527 13.3259 10.0223 13.3259ZM16.5402 4.66518C16.5402 3.99554 16.0045 3.45982 15.3348 3.45982C14.6652 3.45982 14.1295 3.99554 14.1295 4.66518C14.1295 5.33482 14.6652 5.87054 15.3348 5.87054C16.0045 5.87054 16.5402 5.33482 16.5402 4.66518ZM19.933 5.87054C19.8438 4.26339 19.4866 2.83482 18.3259 1.67411C17.1652 0.513393 15.7366 0.15625 14.1295 0.0669643C12.4777 -0.0223214 7.52232 -0.0223214 5.87054 0.0669643C4.26339 0.15625 2.87946 0.513393 1.67411 1.67411C0.513393 2.83482 0.15625 4.26339 0.0669643 5.87054C-0.0223214 7.52232 -0.0223214 12.4777 0.0669643 14.1295C0.15625 15.7366 0.513393 17.1205 1.67411 18.3259C2.87946 19.4866 4.26339 19.8438 5.87054 19.933C7.52232 20.0223 12.4777 20.0223 14.1295 19.933C15.7366 19.8438 17.1652 19.4866 18.3259 18.3259C19.4866 17.1205 19.8438 15.7366 19.933 14.1295C20.0223 12.4777 20.0223 7.52232 19.933 5.87054ZM17.7902 15.8705C17.4777 16.7634 16.7634 17.433 15.9152 17.7902C14.5759 18.3259 11.4509 18.192 10.0223 18.192C8.54911 18.192 5.42411 18.3259 4.12946 17.7902C3.23661 17.433 2.56696 16.7634 2.20982 15.8705C1.67411 14.5759 1.80804 11.4509 1.80804 9.97768C1.80804 8.54911 1.67411 5.42411 2.20982 4.08482C2.56696 3.23661 3.23661 2.56696 4.12946 2.20982C5.42411 1.67411 8.54911 1.80804 10.0223 1.80804C11.4509 1.80804 14.5759 1.67411 15.9152 2.20982C16.7634 2.52232 17.433 3.23661 17.7902 4.08482C18.3259 5.42411 18.192 8.54911 18.192 9.97768C18.192 11.4509 18.3259 14.5759 17.7902 15.8705Z" fill="white"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.facebook.com/cfdcircle" target="_blank" class="social__link">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.8571 0H2.14286C0.9375 0 0 0.982143 0 2.14286V17.8571C0 19.0625 0.9375 20 2.14286 20H8.25893V13.2143H5.44643V10H8.25893V7.58929C8.25893 4.82143 9.91071 3.25893 12.4107 3.25893C13.6607 3.25893 14.9107 3.48214 14.9107 3.48214V6.20536H13.5268C12.1429 6.20536 11.6964 7.05357 11.6964 7.94643V10H14.7768L14.2857 13.2143H11.6964V20H17.8571C19.0179 20 20 19.0625 20 17.8571V2.14286C20 0.982143 19.0179 0 17.8571 0Z" fill="white"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.facebook.com/cfdcircle" target="_blank" class="social__link">
+                        <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4.47427 20V6.62192H0.313199V20H4.47427ZM2.37136 4.83221C3.71365 4.83221 4.78747 3.71365 4.78747 2.37136C4.78747 1.07383 3.71365 0 2.37136 0C1.07383 0 0 1.07383 0 2.37136C0 3.71365 1.07383 4.83221 2.37136 4.83221ZM20.0447 20V12.6622C20.0447 9.08277 19.2394 6.30872 15.0336 6.30872C13.0201 6.30872 11.6779 7.42729 11.0962 8.45638H11.0515V6.62192H7.06935V20H11.2304V13.3781C11.2304 11.6331 11.5436 9.97763 13.6913 9.97763C15.8389 9.97763 15.8837 11.9463 15.8837 13.5123V20H20.0447Z" fill="white"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer__center">
+               <div class="footer__center-menu">
+                    <p class="text">Menu</p>
+                    <nav class="nav">
+                        <ul class="nav__menu">
+                            <li><a href="./index.html">Home</a></li>
+                            <li><a href="./about.html">About</a></li>
+                            <li><a href="./pricing.html">Pricing</a></li>
+                        </ul>
+                        <ul class="nav__menu">
+                            <li><a href="./tokens.html">Tokens</a></li>
+                            <li><a href="./blog.html">Blog</a></li>
+                            <li><a href="./contact.html">contact us</a></li>
+                        </ul>
+                    </nav>
+               </div>
+               <div class="footer__center-application">
+                    <div class="textbox">
+                        <h4 class="heading">Download our Application</h4>
+                        <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sed nulla integer </p>
+                        <div class="button">
+                            <a href="https://cfdcircle.vn/" target="_blank" class="btnmain text-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="23" height="28" viewBox="0 0 23 28" fill="none">
+                                    <g clip-path="url(#clip0_1_18067)">
+                                      <path d="M2.89196 24.0588C3.90895 25.5227 5.29949 27.5246 7.09357 27.5246V27.5211H7.18498C7.86984 27.4776 8.53946 27.2984 9.15543 26.9937H9.17267C9.95229 26.6125 10.8069 26.4127 11.6735 26.409C12.5034 26.4181 13.3208 26.6134 14.0664 26.9807H14.0716C14.6946 27.2969 15.38 27.4685 16.0774 27.4828H16.1792C17.9841 27.4559 19.1378 25.939 20.3451 24.1092C21.1739 22.9141 21.8163 21.5983 22.25 20.2075V20.2005C21.5704 19.9122 20.9494 19.4998 20.4184 18.9842C19.832 18.4267 19.3666 17.7529 19.0513 17.0053C18.7361 16.2577 18.578 15.4524 18.5868 14.6402C18.6038 13.586 18.8836 12.553 19.4003 11.636C19.9169 10.719 20.654 9.9477 21.5438 9.3926C20.9766 8.57764 20.2289 7.90687 19.3599 7.43338C18.4909 6.95989 17.5245 6.69667 16.537 6.66456C16.3724 6.64979 16.2249 6.64197 16.0989 6.64197C15.0096 6.71093 13.9425 6.98375 12.9523 7.44648H12.9316C12.4223 7.69522 11.8757 7.85727 11.3139 7.92606C10.7214 7.86283 10.1448 7.69428 9.61074 7.42824H9.59177C8.73578 7.01893 7.80992 6.77858 6.86419 6.72016H6.78658C5.63538 6.75664 4.51323 7.09318 3.52964 7.69693C2.54603 8.30068 1.73459 9.15102 1.17449 10.1649C0.0454163 12.3999 -0.282374 14.9594 0.246607 17.4099C0.663483 19.7824 1.5618 22.0426 2.88536 24.0493L2.89196 24.0588Z" fill="white"/>
+                                      <path d="M11.1 6.344C11.1889 6.35197 11.2781 6.35546 11.3674 6.35443C12.0995 6.31719 12.8157 6.12494 13.4691 5.79023C14.1225 5.4555 14.6987 4.98583 15.1599 4.41178C16.1822 3.18276 16.6844 1.59846 16.5586 0C15.0035 0.163702 13.5668 0.911959 12.535 2.09555C11.5165 3.26402 11.0004 4.79218 11.1 6.344Z" fill="white"/>
+                                    </g>
+                                    <defs>
+                                      <clipPath id="clip0_1_18067">
+                                        <rect width="23" height="28" fill="white"/>
+                                      </clipPath>
+                                    </defs>
+                                  </svg>
+                                App Store
+                            </a>
+                            <a href="https://cfdcircle.vn/" target="_blank" class="btnmain text-btn">
+                                <svg width="23" height="26" viewBox="0 0 23 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_1_18076)">
+                                    <path d="M16.5186 16.5951L13.066 13.136L1.64111 24.7387C1.75032 24.6974 1.85619 24.6478 1.95776 24.5902L16.5186 16.5951Z" fill="white"/>
+                                    <path d="M0.00850522 1.93999C0.0144238 3.35531 0.107148 22.2236 0.116026 23.4133C0.0902982 23.661 0.125802 23.9112 0.219399 24.1418C0.312996 24.3724 0.4618 24.5764 0.652648 24.7356L12.5668 12.637L0.600367 0.643433C0.393848 0.785424 0.229684 0.981073 0.125431 1.20945C0.0211803 1.43783 -0.0192362 1.69035 0.00850522 1.93999Z" fill="white"/>
+                                    <path d="M17.1585 8.98108L13.561 12.6342L17.1625 16.2418L22.1124 13.523C22.7043 13.1953 23.3336 12.36 22.1124 11.692L17.1585 8.98108Z" fill="white"/>
+                                    <path d="M1.95772 0.659347C1.7996 0.5753 1.62738 0.521278 1.44971 0.5L13.0631 12.1343L16.5156 8.62869L1.95772 0.659347Z" fill="white"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_1_18076">
+                                    <rect width="23" height="25" fill="white" transform="translate(0 0.5)"/>
+                                    </clipPath>
+                                    </defs>
+                                    </svg>
+                                App Store
+                            </a>
+                        </div>
+                    </div>
+               </div>   
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__bottom-copyright">© 2023 CFD Circle, Inc.</p>
+                <button class="footer__bottom-backtotop">
+                    <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 18.9375L8 1.875M14.5 7.5625L8 1.0625L1.5 7.5625" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </footer>
+</body>
+<script type="text/javascript" src="./dest/jsmain.min.js"></script>
+<script type="text/javascript" src="./dest/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/phucbm/flickity-responsive@2.0.6/flickity-responsive.min.js"></script>
+</html>

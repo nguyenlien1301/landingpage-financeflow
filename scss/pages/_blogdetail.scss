@@ -1,0 +1,169 @@
+.post {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--gap);
+    padding-top: calc(56px + var(--h-header));
+    .container {
+        grid-column: 2/12;
+    }
+    .textbox {
+        margin-top: 34px;
+        .heading {
+            margin-bottom: 16px;
+        }
+    }
+    @include md {
+        .textbox {
+            .heading {
+                font-size: 5rem;
+                line-height: 6rem;
+            }
+        }
+    }
+    @include xs {
+        padding-top: calc(48px + var(--h-header));
+        .container {
+            grid-column: 1/13;
+        }
+        .textbox {
+            margin-top: 32px;
+            .heading {
+                font-size: 42px;
+                line-height: 5rem;
+            }
+        }
+    }
+}
+
+.article {
+    padding-top: 64px;
+    padding-bottom: 120px;
+    .container {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        column-gap: var(--gap);
+    }
+    &__thumbnail {
+        grid-column: 1/13;
+        &-img {
+            width: 100%;
+        }
+    }
+    .content {
+        grid-column: 2/12;
+        margin-top: 45px;
+        &__desc {
+            h2 {
+                margin-bottom: 40px;
+                font-size: var(--fz-h2);
+                line-height: var(--lh-h2);
+                letter-spacing: -0.42px;
+                font-family: var(--font-bold);
+            }
+            h3 {
+                font-size: var(--fz-number);
+                line-height: var(--lh-number);
+                letter-spacing: var(--spacing-number);
+                font-family: var(--font-bold);
+                margin-bottom: 24px;
+            }
+            &:first-child h3 {
+                margin-top: 40px;
+            }
+            p {
+                strong {
+                    font-family: var(--font-bold);
+                }
+                a {
+                    text-decoration: initial;
+                }
+                &:nth-child(odd) {
+                    margin-top: 16px;
+                }
+            }
+            ul {
+                padding-left: 30px;
+                li {
+                    list-style-type: disc;
+                }
+            }
+        }
+        blockquote {
+            background-color: var(--blue-box);
+            padding: 40px 50px;
+            border-radius: 30px;
+            margin: 45px 0;
+        }
+        &__thumbnail {
+            margin: 45px 0;
+            img {
+                width: 100%;
+            }
+            figcaption {
+                margin-top: 28px;
+                font-size: var(--fz-text-body-small);
+                line-height: var(--lh-text-body-small);
+                letter-spacing: var(--spacing);
+                text-align: center;
+                font-family: var(--font-italic);
+            }
+        }
+        &__share {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 56px;
+            gap: 17px;
+            &-text {
+                font-family: var(--font-medium);
+            }
+        }
+    }
+    @include xs {
+        padding-top: 32px;
+        padding-bottom: 82px;
+        .content {
+            grid-column: 1/13;
+            margin-top: 30px;
+            &__desc {
+                h2 {
+                    margin-bottom: 24px;
+                }
+                &:first-child h3 {
+                    margin-top: 24px;
+                }
+            }
+            &__thumbnail {
+                margin-top: 30px;
+                margin-bottom: 30px;
+            }
+            blockquote { 
+                margin: 30px 0;
+                padding: 32px;
+            }
+        }
+    }
+}
+
+.latest {
+    padding: 120px 0;
+    .news__list {
+        margin-top: 56px;
+    }
+    @include md {
+        .textbox {
+            flex-direction: row;
+            align-items: center;
+        }
+    }
+    @include xs {
+        padding: 80px 0;
+    }
+    @include xxs {
+        .textbox {
+            flex-direction: column;
+            .btnmain {
+                width: 100%;
+            }
+        }
+    }
+}
