@@ -222,15 +222,6 @@ let handleAccordion = () => {
   const question = document.querySelectorAll(
     ".accordion .accordion__list .accordion__list-question .content .content__question"
   );
-  function removeActive(selectedItem) {
-    question.forEach((item) => {
-      if (item !== selectedItem) {
-        item.classList.remove("active");
-        let answer = item.nextElementSibling;
-        answer.style.maxHeight = null;
-      }
-    });
-  }
   question.forEach((item, index) => {
     item.addEventListener("click", () => {
       question.forEach((item, _index) => {

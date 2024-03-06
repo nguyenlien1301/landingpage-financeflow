@@ -21,6 +21,9 @@
                         letter-spacing: var(--spacing-text-blog);
                     }
                 }
+                .tag {
+                    top: initial;
+                }
             }
             .author {
                 display: none;
@@ -42,6 +45,9 @@
                     }
                     &-text {
                         @include overtext(initial);
+                    }
+                    .tag {
+                        top: 0;
                     }
                 }
             }

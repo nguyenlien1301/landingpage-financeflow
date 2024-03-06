@@ -187,7 +187,7 @@
             grid-column: 3/11;
             .content {
                 padding: 32px 8px;
-                border-bottom: 1px solid var(--white-color);
+                border-bottom: 1px solid rgba(255, 255, 255, 0.2);
                 &__question {
                     cursor: pointer;
                     width: 100%;
@@ -220,6 +220,9 @@
                         &::after {
                             @include transform(translateY(-50%) rotate(0));
                         }
+                        .heading {
+                            color: var(--blue-light);
+                        }
                     }
                     .heading {
                         font-size: var(--fz-question);
@@ -241,10 +244,6 @@
                     }
                 }
             }
-            &.active {
-                background-color: var(--white-color);
-            }
-
         }
     }
     @include md {
@@ -262,6 +261,12 @@
             &-question {
                 .content {
                     padding: 24px 0;
+                    &__question {
+                        &::before, 
+                        &::after {
+                            width: 20px;
+                        }
+                    }
                 }
             }
         }
