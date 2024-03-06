@@ -13,6 +13,9 @@
         box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.5);
         height: 80px;
     }
+    &.is-zIndex {
+        z-index: 1000;
+    }
     .container {
         display: flex;
         align-items: center;

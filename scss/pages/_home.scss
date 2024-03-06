@@ -705,6 +705,9 @@
     z-index: 10;
     @include transition(var(--transition));
     z-index: 1000;
+    &.is-none {
+        display: none;
+    }
 }
 
 .popup {

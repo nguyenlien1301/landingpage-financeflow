@@ -96,6 +96,9 @@
             &.is-show {
                 @include visible;
             }
+            &.is-none {
+                display: none;
+            }
             svg {
                 path {
                     @include transition(var(--transition));
